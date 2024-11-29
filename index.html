@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single Pendulum</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="controls">
+        <label for="sSlider" id="sLabel" class="sLabel">Speed</label>
+        <input
+          class="sSlider"
+          id="sSlider"
+          type="range"
+          max="0.05"
+          min="0.001"
+          value="0.005"
+          step="0.001"
+        />
+
+        <label for="fixedPoints" id="fixedPointsLabel" class="fixedPointsLabel"
+          >Num Fixed</label
+        >
+        <input
+          class="fixedPoints"
+          id="fixedPoints"
+          type="range"
+          max="20"
+          min="1"
+          value="5"
+          step="1"
+        />
+
+        <label
+          for="movingPoints"
+          id="movingPointsLabel"
+          class="movingPointsLabel"
+          >Num Moving</label
+        >
+        <input
+          class="movingPoints"
+          id="movingPoints"
+          type="range"
+          max="50"
+          min="1"
+          value="20"
+          step="1"
+        />
+
+        <label for="phase" id="phaseLabel" class="phaseLabel">Phase</label>
+        <input
+          class="phase"
+          id="phase"
+          type="range"
+          max="50"
+          min="0"
+          value="0"
+          step="1"
+        />
+      </div>
+
+      <canvas class="canvas1" id="canvas1"> </canvas>
+    </div>
+
+    <script src="staticPoint.js"></script>
+    <script src="mover.js"></script>
+    <script src="utilities.js"></script>
+    <script src="vector.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

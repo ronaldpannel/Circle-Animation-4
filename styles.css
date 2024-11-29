@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    width: 605px;
+    height: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.controls {
+    position: relative;
+    height: 200px;
+    max-width: 100%;
+}
+
+.canvas1 {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.sSlider {
+    position: absolute;
+    top: 20px;
+    left: 130px;
+}
+
+.sLabel {
+    position: absolute;
+    color: white;
+    top: 16px;
+    left: 20px;
+}
+
+.fixedPoints {
+    position: absolute;
+    top: 50px;
+    left: 130px;
+}
+
+.fixedPointsLabel {
+    position: absolute;
+    color: white;
+    top: 45px;
+    left: 20px;
+}
+
+.movingPoints {
+    position: absolute;
+    top: 80px;
+    left: 135px;
+}
+
+.movingPointsLabel {
+    position: absolute;
+    color: white;
+    top: 75px;
+    left: 20px;
+}
+
+.phase {
+    position: absolute;
+    top: 110px;
+    left: 140px;
+}
+
+.phaseLabel {
+    position: absolute;
+    color: white;
+    top: 110px;
+    left: 20px;
+}
