@@ -38,54 +38,104 @@ body {
     touch-action: none;
 }
 
+.sSlider1 {
+    position: absolute;
+    top: 30px;
+    left: 130px;
+    width: 150px;
+}
+
+.sLabel1 {
+    position: absolute;
+    color: white;
+    top: 26px;
+    left: 20px;
+}
+.sLabel1Value {
+    position: absolute;
+    color: white;
+    top: 26px;
+    left: 320px;
+}
+
 .sSlider {
     position: absolute;
-    top: 20px;
+    top: 60px;
     left: 130px;
+    width: 150px;
 }
 
 .sLabel {
     position: absolute;
     color: white;
-    top: 16px;
+    top: 56px;
     left: 20px;
+}
+.sLabelValue {
+    position: absolute;
+    color: white;
+    top: 56px;
+    left: 320px;
 }
 
 .fixedPoints {
     position: absolute;
-    top: 50px;
+    top: 90px;
     left: 130px;
-}
+    width: 150px;
+    }
+
 
 .fixedPointsLabel {
     position: absolute;
     color: white;
-    top: 45px;
+    top: 85px;
     left: 20px;
+}
+.fixedPointsLabelValue {
+    position: absolute;
+    color: white;
+    top: 85px;
+    left: 320px;
 }
 
 .movingPoints {
     position: absolute;
-    top: 80px;
+    top: 120px;
     left: 135px;
-}
+    width: 150px;
+    }
+
 
 .movingPointsLabel {
     position: absolute;
     color: white;
-    top: 75px;
+    top: 115px;
     left: 20px;
+}
+.movingPointsLabelValue {
+    position: absolute;
+    color: white;
+    top: 115px;
+    left: 320px;
 }
 
 .phase {
     position: absolute;
-    top: 110px;
+    top: 150px;
     left: 140px;
+    width: 150px;
 }
 
 .phaseLabel {
     position: absolute;
     color: white;
-    top: 110px;
+    top: 150px;
     left: 20px;
+}
+.phaseLabelValue {
+    position: absolute;
+    color: white;
+    top: 150px;
+    left: 320px;
 }

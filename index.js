@@ -16,25 +16,50 @@ class Effect {
     this.moverArray = [];
     this.staticArray = [];
     this.scaler = 0.01;
-    this.phase = 0
+    this.scaler1 = 0;
+    this.phase = 0;
 
     const sSlider = document.getElementById("sSlider");
+    const sLabelValue = document.getElementById("sLabelValue");
+
+    const sSlider1 = document.getElementById("sSlider1");
+    const sLabel1Value = document.getElementById("sLabel1Value");
+
     const fixedPointsSlider = document.getElementById("fixedPoints");
+    const fixedPointsSLabelValue = document.getElementById(
+      "fixedPointsLabelValue"
+    );
+
     const movingPointsSlider = document.getElementById("movingPoints");
+    let movingPointsLabelValue = document.getElementById(
+      "movingPointsLabelValue"
+    );
+
     const phaseSlider = document.getElementById("phase");
+    let phaseLabelValue = document.getElementById("phaseLabelValue");
 
     sSlider.addEventListener("change", (e) => {
-       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
       this.moverArray = [];
       this.scaler = Number(e.target.value);
+      sLabelValue.innerHTML = Number(e.target.value);
       this.drawMover();
     });
 
+    sSlider1.addEventListener("change", (e) => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      this.staticArray = [];
+      this.scaler1 = Number(e.target.value);
+      sLabel1Value.innerHTML = Number(e.target.value);
+      this.drawStaticPoints();
+    });
+
     fixedPointsSlider.addEventListener("change", (e) => {
-       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
       this.numStatic = 0;
-      this.staticArray = []
+      this.staticArray = [];
       this.numStatic = Number(e.target.value);
+      fixedPointsSLabelValue.innerHTML = Number(e.target.value);
       this.drawStaticPoints();
     });
 
@@ -43,14 +68,15 @@ class Effect {
       this.numMover = 0;
       this.moverArray = [];
       this.numMover = Number(e.target.value);
+      movingPointsLabelValue.innerHTML = Number(e.target.value);
       this.drawMover();
     });
 
     phaseSlider.addEventListener("change", (e) => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      // this.numMover = 0;
       this.moverArray = [];
       this.phase = Number(e.target.value);
+      phaseLabelValue.innerHTML = Number(e.target.value);
       this.drawMover();
     });
 
@@ -72,7 +98,7 @@ class Effect {
   drawStaticPoints() {
     for (let i = 0; i < this.numStatic; i++) {
       let angle = ((Math.PI * 2) / this.numStatic) * i;
-      this.staticArray.push(new StaticPoint(this, 0, 0, angle));
+      this.staticArray.push(new StaticPoint(this, 0, 0, angle, this.scaler1));
     }
   }
   drawLines(ctx) {
